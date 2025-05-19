@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 
 class Player {
   constructor({ position, velocity }) {
-    this.position = position; // {x, y}
+    this.position = position; 
     this.velocity = velocity;
     this.rotation = 0;
   }
@@ -128,17 +128,6 @@ class Asteroid {
 
     c.restore();
   }
-
-  /*  Circle shape Asteroids
-    draw() {
-    c.beginPath();
-    c.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2, false);
-    c.closePath();
-    c.fillStyle = "grey";
-    c.strokeStyle = "white";
-    c.fill();
-    c.stroke();
-  } */
 
   update() {
     this.draw();
@@ -336,8 +325,7 @@ function animate() {
     asteroid.update();
 
     if (circleTriangleCollision(asteroid, player.getVerticies())) {
-      alert("GAME OVER\
-        YOUR SCORE: " + score);
+      alert("GAME OVER");
       window.cancelAnimationFrame(animationId);
       clearInterval(intervalId);
       score = 0;
