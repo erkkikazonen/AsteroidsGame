@@ -403,12 +403,15 @@ animate();
 window.addEventListener("keydown", (event) => {
   switch (event.code) {
     case "KeyW":
+    case "ArrowUp":
       keys.w.pressed = true;
       break;
     case "KeyA":
+    case "ArrowLeft":
       keys.a.pressed = true;
       break;
     case "KeyD":
+    case "ArrowRight":
       keys.d.pressed = true;
       break;
     case "Space":
@@ -432,12 +435,15 @@ window.addEventListener("keydown", (event) => {
 window.addEventListener("keyup", (event) => {
   switch (event.code) {
     case "KeyW":
+    case "ArrowUp":
       keys.w.pressed = false;
       break;
     case "KeyA":
+    case "ArrowLeft":
       keys.a.pressed = false;
       break;
     case "KeyD":
+    case "ArrowRight":
       keys.d.pressed = false;
       break;
   }
